@@ -21,7 +21,7 @@ RUN build-parts "$IMAGE_ROOT/build.d"
 # Add in files
 ADD image $IMAGE_ROOT/
 
-VOLUME ["/etc/salt/pki", "/srv/salt", "/srv/pillar"]
+VOLUME ["/etc/salt/pki", "/srv/salt/env", "/srv/salt/pillar", "/srv/salt/reclass", "/srv/salt/saltclass"]
 EXPOSE 4505 4506
 
 # Fucking CI docker is from 1999.
